@@ -1,0 +1,56 @@
+h1{
+	text-align:center;
+}
+
+body{
+
+    background:url('фон.jpg') ;
+    background-size:cover;
+    background-repeat:no-repeat;
+
+	font-size:2vw;
+	padding:10px;
+	text-align:left;
+	image-rendering: auto;
+}
+p{
+
+}
+
+ol{
+    vspace:100;
+    text-align:left;
+}
+img {
+
+  width: 30%;
+}
+t{
+ color: blue;
+}
+.hide {
+    display: none;
+}
+.hide + label ~ div{
+    display: none;
+}
+/* оформляем текст label */
+.hide + label {
+
+    padding: 0;
+    color: blue;
+    cursor: pointer;
+    display: block;
+}
+/* вид текста label при активном переключателе */
+.hide:checked + label {
+    color: red;
+    border-bottom: 0;
+}
+/* когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked + label + div {
+    display: inline-block;
+
+}
+
+/* demo контейнер */
