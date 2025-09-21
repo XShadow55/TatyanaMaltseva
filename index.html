@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мальцева Татьяна Викторовна - Преподаватель</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2c3e50, #4a6580);
+            color: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .profile-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .profile-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .profile-image {
+            flex: 0 0 300px;
+            text-align: center;
+        }
+        
+        .profile-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .info-list {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .info-list ol {
+            padding-left: 20px;
+        }
+        
+        .info-list li {
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+        
+        t {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .toggle-section {
+            margin-bottom: 15px;
+        }
+        
+        .toggle-header {
+            background-color: #4a6580;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        
+        .toggle-header:hover {
+            background-color: #3a5568;
+        }
+        
+        .toggle-header::after {
+            content: '+';
+            font-size: 1.5rem;
+        }
+        
+        .toggle-header.active::after {
+            content: '-';
+        }
+        
+        .toggle-content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: white;
+            border-radius: 0 0 6px 6px;
+        }
+        
+        .toggle-content ul {
+            padding: 15px 20px 20px 40px;
+            margin: 0;
+        }
+        
+        .quote {
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+            background-color: #e9f7fe;
+            border-left: 5px solid #4a6580;
+            border-radius: 6px;
+            margin-top: 30px;
+        }
+        
+        .document-list {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        
+        .document-list li {
+            margin-bottom: 10px;
+        }
+        
+        a {
+            color: #2c5aa0;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        a:hover {
+            color: #1e3c72;
+            text-decoration: underline;
+        }
+        
+        iframe {
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+            }
+            
+            .profile-image {
+                order: -1;
+                margin: 0 auto 20px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Мальцева Татьяна Викторовна</h1>
+    </header>
+    
+    <div class="profile-container">
+        <div class="profile-info">
+            <div class="info-list">
+                <ol>
+                    <li><t>Дата рождения:</t> 08.01.1969 г.</li>
+                    <li><t>Образование:</t> высшее.<br>
+                        Институт инженеров водного транспорта. г. Н.Новгород.<br>
+                        Учеба 1986 – 1991 г.<br>
+                        Специальность: Судовые машины и механизмы.<br>
+                        Квалификация: инженер – механик.
+                    </li>
+                    <li><t>Педагогический стаж:</t> 20 лет.</li>
+                    <li><t>Квалификационная категория:</t> высшая.</li>
+                    <li><t>Место работы:</t> Балахнинский филиал «Национального исследовательского Нижегородского государственного университета им. Н.И. Лобачевского», отделение СПО, преподаватель.</li>
+                    
+                    <li class="toggle-section">
+                        <div class="toggle-header"><ins>Преподаваемые дисциплины:</ins></div>
+                        <div class="toggle-content">
+                            <ul class="document-list">
+                                <li>Инженерная графика. Рабочая программа дисциплины <a href="path/to/ОП.01 ИНЖЕНЕРНАЯ ГРАФИКА.docx">(скачать документ)</a></li>
+                                <li>Компьютерная графика. Рабочая программа дисциплины <a href="path/to/ОП.09 КОМПЬЮТЕРНАЯ ГРАФИКА.docx">(скачать документ)</a></li>
+                                <li>Техническая механика. Рабочая программа дисциплины <a href="path/to/ОП.02 ТЕХНИЧЕСКАЯ МЕХАНИКА.docx">(скачать документ)</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li class="toggle-section">
+                        <div class="toggle-header"><ins>Методические разработки по дисциплине «Инженерная графика»:</ins></div>
+                        <div class="toggle-content">
+                            <ul class="document-list">
+                                <li>Презентация по теме: «Чтение сборочных чертежей и чертежей общего вида. Деталирование.» <a href="path/to/Методическая разработка учебного занятия.pptx">(скачать документ)</a></li>
+                                <li>Презентация по теме: «Выполнение чертежа резьбовых соединений в САПР» <a href="path/to/Шпилечное соединение.pptx">(скачать документ)</a></li>
+                                <li>Презентация по теме: «Комплексный чертеж геометрических тел. Нахождение проекции точки, лежащей на поверхности геометрического тела.» <a href="path/to/Комплексный чертеж геометрических тел.pptx">(скачать документ)</a></li>
+                                <li>Презентация по теме: «Комплекс размеров на чертеже» <a href="path/to/Комплекс размеров на чертеже.pptx">(скачать документ)</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li class="toggle-section">
+                        <div class="toggle-header"><ins>Методические разработки по дисциплине «Механика»:</ins></div>
+                        <div class="toggle-content">
+                            <ul class="document-list">
+                                <li>Презентация по теме: «Устойчивость сжатых стержней» <a href="path/to/Устойчивость сжатых стержней.pptx">(скачать документ)</a></li>
+                                <li>Презентация по теме: «Срез и смятие» <a href="path/to/Срез и смятие.pptx">(скачать документ)</a></li>
+                                <li>Презентация по теме: «Растяжение, сжатие» <a href="path/to/Растяжение и сжатие.pptx">(скачать документ)</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li class="toggle-section">
+                        <div class="toggle-header"><ins>Методические разработки по дисциплине «Компьютерная графика»:</ins></div>
+                        <div class="toggle-content">
+                            <ul class="document-list">
+                                <li>Инструкция по теме: «Построение тела вращения в КОМПАС 3D» <a href="path/to/Построение тела вращения.pdf" target="_blank">(открыть документ)</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li class="toggle-section">
+                        <div class="toggle-header"><ins>Благодарность</ins></div>
+                        <div class="toggle-content">
+                            <iframe src="path/to/Благодарственное письмо.pdf" width="100%" height="600px"></iframe>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="profile-image">
+            <img src="path/to/dd.png" alt="Мальцева Татьяна Викторовна">
+        </div>
+    </div>
+    
+    <div class="quote">
+        <t>Педагогическое кредо:</t> «Начинаем с лёгкого и потихоньку переходим к более сложному, шаг за шагом»
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Добавляем обработчики событий для раскрывающихся секций
+            const toggleHeaders = document.querySelectorAll('.toggle-header');
+            
+            toggleHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    const content = this.nextElementSibling;
+                    
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+            
+            // Автоматически открываем первую секцию
+            if (toggleHeaders.length > 0) {
+                toggleHeaders[0].click();
+            }
+        });
+    </script>
+</body>
+</html>
